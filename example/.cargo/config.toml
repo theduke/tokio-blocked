@@ -1,0 +1,3 @@
+[build]
+# Must pass the tokio-unstable flag to enabe tracing integration in tokio.
+rustflags = ["--cfg", "tokio_unstable"]

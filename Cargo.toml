@@ -1,0 +1,27 @@
+[package]
+name = "tokio-blocked"
+version = "0.1.0-alpha.1"
+description = "tracing layer that logs tokio tasks that are blocked for too long - helps find synchronous or CPU heavy code in async tokio code."
+authors = ["Christoph Herzog <chris@theduke.at>"]
+keywords = ["tokio", "tracing", "anlytics", "async"]
+repository = "https://github.com/theduke/tokio-blocked"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+edition = "2021"
+
+[dependencies]
+tracing = "0.1"
+tracing-subscriber = "0.3"
+tracing-core = "0.1"
+
+# [dev-dependencies]
+# tokio = { version = "1", features = ["rt-multi-thread", "tracing"] }
+# tracing-subscriber = { version = "0.3", features = ["fmt", "env-filter"] }
+
+[workspace]
+members = [
+    "example",
+]
+
+[workspace.dependencies]
+tokio-blocked = { path = "." }

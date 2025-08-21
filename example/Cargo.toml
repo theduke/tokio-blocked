@@ -1,0 +1,14 @@
+[package]
+name = "tokio-blocked-example"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+# Replace this with:
+# tokio-blocked = "0.1"
+tokio-blocked.workspace = true
+
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["fmt", "env-filter"] }
+tokio = { version = "1.47.1", features = ["rt-multi-thread", "tracing", "macros", "time"] }
