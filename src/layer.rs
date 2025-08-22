@@ -217,7 +217,7 @@ where
                 .to_string();
             let line = ext.origin_line.or(meta.line()).unwrap_or(0u32);
             tracing::event!(
-                target: "console_subscriber::task_poll_blocked",
+                target: "tokio_blocked::task_poll_blocked",
                 Level::WARN,
                 poll_duration_ns = elapsed.as_nanos() as u64,
                 callsite.name = meta.name(),
@@ -286,7 +286,7 @@ where
                 .to_string();
             let line = origin_line.or(meta.line()).unwrap_or(0u32);
             tracing::event!(
-                target: "console_subscriber::task_blocked_total",
+                target: "tokio_blocked::task_blocked_total",
                 Level::WARN,
                 busy_ns = total_busy.as_nanos() as u64,
                 duration_ns = total_span.as_nanos() as u64,
