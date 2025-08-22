@@ -6,11 +6,11 @@
 
 `tokio-blocked` integrates with Tokios `tracing` integration to detect tasks
 that are blocked by synchronus or CPU heavy code,
-and surfaces information to developers with tracing log messages or data dumps.
+and surfaces information to developers with log messages or data dumps.
 
 ## Why?
 
-One of the most common mistakes in Tokio-based async Rust code is running
+One of the most common mistakes in async Rust code is running
 synchronous blocking operations or CPU-heavy code inside async tasks.
 
 The recommendation is to offload all code that takes more than 10-100 **microseconds**
@@ -21,10 +21,9 @@ and degraded performance that only shows up under load / in production.
 
 ## Quickstart
 
-
 **NOTE**: The tracing feature in tokio is experimental (as of Tokio 1.47).
-To make it work, `RUSTFLAGS="--cfg tokio_unstable"` or similar must be passed
-to builds.
+To make it work, the env var `RUSTFLAGS="--cfg tokio_unstable"` must be set
+when building the code.
 
 To use `tokio-blocked`, follow these steps:
 
@@ -33,7 +32,7 @@ In Cargo.toml:
 [dependencies]
 
 # Enable the tracing feature for Tokio
-toki = = {version = "1", features = ["tracing", "rt-multi-thread", ...]}
+tokio = = {version = "1", features = ["tracing", "rt-multi-thread", ...]}
 
 # Depend on tokio-blocked and the tracing
 tokio-blocked = "*"
@@ -86,11 +85,19 @@ RUSTFLAGS="--cfg tokio_unstable" RUST_LOG=tokio_blocked=warn cargo run
 
 ## Configuration
 
+TODO
+
 
 ## Notes and Limitations
 
+TODO
 
 ## Develop
+
+## Acknowledgements
+
+Thanks to [tokio-console](https://github.com/tokio-rs/console) for examples
+of extracting information from the Tokio trace data.
 
 ### License
 
