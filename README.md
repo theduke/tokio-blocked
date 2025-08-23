@@ -82,6 +82,12 @@ Now the code can be run with:
 RUSTFLAGS="--cfg tokio_unstable" RUST_LOG=warn cargo run
 ```
 
+You will see a log message like:
+
+```
+2025-08-23T06:40:30.860946Z  WARN tokio_blocked::task_poll_blocked: poll_duration_ns=2000394057 callsite.name="runtime.spawn" callsite.target="tokio::task" callsite.file="src/main.rs" callsite.line=24 callsite.col=5
+```
+
 
 ## Configuration
 
