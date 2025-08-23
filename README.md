@@ -32,7 +32,7 @@ In Cargo.toml:
 [dependencies]
 
 # Enable the tracing feature for Tokio
-tokio = = {version = "1", features = ["tracing", "rt-multi-thread"]}
+tokio = { version = "1", features = ["tracing", "rt-multi-thread", "macros"] }
 
 # Depend on tokio-blocked and the tracing crates
 tokio-blocked = "*"
