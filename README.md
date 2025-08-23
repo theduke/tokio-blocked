@@ -32,9 +32,9 @@ In Cargo.toml:
 [dependencies]
 
 # Enable the tracing feature for Tokio
-tokio = = {version = "1", features = ["tracing", "rt-multi-thread", ...]}
+tokio = = {version = "1", features = ["tracing", "rt-multi-thread"]}
 
-# Depend on tokio-blocked and the tracing
+# Depend on tokio-blocked and the tracing crates
 tokio-blocked = "*"
 
 tracing = "0.1.41"
@@ -79,7 +79,7 @@ async fn main() {
 Now the code can be run with:
 
 ```bash
-RUSTFLAGS="--cfg tokio_unstable" RUST_LOG=tokio_blocked=warn cargo run
+RUSTFLAGS="--cfg tokio_unstable" RUST_LOG=warn cargo run
 ```
 
 
