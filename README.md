@@ -21,6 +21,9 @@ and degraded performance that only show up under load or in production.
 
 ## Quickstart
 
+If you prefer examples, just jump into the [examples](./examples) directory 
+and execute the `./run.sh` script.
+
 **NOTE**: The `tracing` feature in Tokio is experimental (as of Tokio 1.47).
 To enable it, set the environment variable `RUSTFLAGS="--cfg tokio_unstable"`
 when building.
@@ -96,7 +99,16 @@ TODO
 
 ## Notes and Limitations
 
-TODO
+* Blocking code location
+  Tokio can only capture the location of the `tokio::task::spawn` callsite,
+  so that is all the information `tokio-blocked` can provide.
+  If you have a large future that can take many different code paths,
+  like in a web server with many routes,
+  it can be very hard to find the exact location of the blocking code.
+
+  A workaround is to wrap potentially problematic code in `tokio::spawn(...).await`
+  no narrow down the location.
+  
 
 ## Develop
 
