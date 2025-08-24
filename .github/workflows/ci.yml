@@ -56,10 +56,11 @@ jobs:
     - name: Test
       run: cargo hack test --each-feature --workspace
 
-  # minimal-versions:
-  #   name: Minimal versions
-  #   runs-on: ubuntu-latest
-  #   steps:
+   minimal-versions:
+    name: Minimal versions
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Skipped"
   #   - name: Checkout repository
   #     uses: actions/checkout@v4
   #   - name: Install stable Rust
