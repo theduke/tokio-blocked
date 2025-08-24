@@ -1,6 +1,6 @@
 [package]
 name = "tokio-blocked"
-version = "0.1.0-alpha.2"
+version = "0.1.0"
 description = "tracing layer that logs tokio tasks that are blocked for too long - helps find synchronous or CPU heavy code in async tokio code."
 authors = ["Christoph Herzog <chris@theduke.at>"]
 keywords = ["tokio", "tracing", "anlytics", "async"]
