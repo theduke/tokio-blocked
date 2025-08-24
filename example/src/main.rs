@@ -23,7 +23,7 @@ async fn main() {
 
     tokio::task::spawn(async {
         // BAD!
-        std::thread::sleep(Duration::from_secs(2));
+        std::thread::sleep(Duration::from_secs(1));
     })
     .await
     .unwrap();
@@ -35,6 +35,4 @@ async fn main() {
     })
     .await
     .unwrap();
-
-    tokio::time::sleep(Duration::from_secs(2)).await;
 }
