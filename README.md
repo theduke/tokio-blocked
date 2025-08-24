@@ -21,7 +21,7 @@ and degraded performance that only show up under load or in production.
 
 ## Quickstart
 
-If you prefer examples, just jump into the [examples](./examples) directory 
+If you prefer examples, just jump into the [example](./example) directory 
 and execute the `./run.sh` script.
 
 **NOTE**: The `tracing` feature in Tokio is experimental (as of Tokio 1.47).
