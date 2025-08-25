@@ -99,7 +99,8 @@ TODO
 
 ## Notes and Limitations
 
-* Blocking code location
+* Blocking code location:
+  
   Tokio can only capture the location of the `tokio::task::spawn` callsite,
   so that is all the information `tokio-blocked` can provide.
   If you have a large future that can take many different code paths,
